@@ -19,19 +19,18 @@ setup(
     author_email = 'philomat@popkultur.net',
     packages = [
         'form_designer',
-        'form_designer.admin',
         'form_designer.templatetags',
     ],
     package_data = {
         'form_designer': [
-                'media/form_designer/js/lib/*/js/*.js',
-                'media/form_designer/js/lib/*/*.js',
-                'templates/admin/form_designer/formlog/change_list.html',
-                'templates/*/*/*.html',
-                'templates/*/*.html',
-                'templates/*/*.txt',
-                'locale/*/LC_MESSAGES/*',
-            ],
+            'media/form_designer/js/lib/*/js/*.js',
+            'media/form_designer/js/lib/*.js',
+            'templates/admin/form_designer/formlog/change_list.html',
+            'templates/html/formdefinition/*.html',
+            'templates/html/formdefinition/forms/*.html',
+            'templates/txt/formdefinition/*.txt',
+            'locale/*/LC_MESSAGES/*',
+        ],
     },
     classifiers = [
         'Development Status :: 4 - Beta',
