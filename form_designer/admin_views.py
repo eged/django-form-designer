@@ -1,4 +1,4 @@
-# encoding=utf8
+# encoding=utf-8
 from django.http import HttpResponse
 from form_designer.models import FormLog
 from form_designer.admin import FormLogAdmin
