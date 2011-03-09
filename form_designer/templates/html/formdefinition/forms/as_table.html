@@ -5,8 +5,10 @@
   <li>{{ message }}</li>
 </ul>
 {% endif %}
-<form name="{{ form_definition.name }}" action="{{ form_definition.action }}" method="{{ form_definition.method }}">
+<form name="{{ form_definition.name }}" action="{{ form_definition.action }}" method="{{ form_definition.method }}" id="{{ form_definition.name }}" class="form_definition" id="{{ form_definition.name|lower }}>
 {% csrf_token %}
+<table>
 {{ form.as_table }}
+</table>
 <input type="submit" value="{% if form_definition.submit_label %}{{ form_definition.submit_label }}{% else %}{% trans "Submit" %}{% endif %}" />
 </form>
