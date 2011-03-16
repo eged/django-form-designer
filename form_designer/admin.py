@@ -18,15 +18,15 @@ class FormDefinitionFieldInlineForm(forms.ModelForm):
 class FormDefinitionFieldInline(admin.StackedInline):
     form = FormDefinitionFieldInlineForm
     model = FormDefinitionField
-    extra = 8
+    extra = 1
     fieldsets = [
-        (_('Basic'), {'fields': ['name', 'field_class', 'required', 'initial']}),
-        (_('Display'), {'fields': ['label', 'widget', 'help_text', 'position', 'include_result']}),
-        (_('Text'), {'fields': ['max_length', 'min_length']}),
-        (_('Numbers'), {'fields': ['max_value', 'min_value', 'max_digits', 'decimal_places']}),
-        (_('Regex'), {'fields': ['regex']}),
-        (_('Choices'), {'fields': ['choice_values', 'choice_labels']}),
-        (_('Model Choices'), {'fields': ['choice_model', 'choice_model_empty_label']}),
+        (None, {'fields': ['name', 'field_class', 'required', 'initial']}),
+        (_('Display'), {'fields': ['label', 'widget', 'help_text', 'position', 'include_result'], 'classes': ('collapse',) }),
+        (_('Text'), {'fields': ['max_length', 'min_length'], 'classes': ('collapse',)}),
+        (_('Numbers'), {'fields': ['max_value', 'min_value', 'max_digits', 'decimal_places'], 'classes': ('collapse',)}),
+        (_('Regex'), {'fields': ['regex'], 'classes': ('collapse',)}),
+        (_('Choices'), {'fields': ['choice_values', 'choice_labels'], 'classes': ('collapse',)}),
+        (_('Model Choices'), {'fields': ['choice_model', 'choice_model_empty_label'], 'classes': ('collapse',)}),
     ]
 
 class FormDefinitionForm(forms.ModelForm):
